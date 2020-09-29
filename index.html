@@ -10,6 +10,9 @@
 
   gtag('config', 'UA-2057223-42');
 </script>
+		<script>
+//			if((self.parent&&!(self.parent===self))&&(self.parent.frames.length!=0)){self.parent.location=document.location}
+		</script>
 
 		<meta http-equiv="Cache-Control" content="no-cache">
 		<meta charset="utf-8">
@@ -19,19 +22,21 @@
 		{
 			url = document.referrer; 
 			ref = url.match(/:\/\/(.[^/]+)/)[1];
-		}
-		document.write('<title>'+url+'</title>');
+			document.write('<title>'+url+'</title>');
+		} else document.write('<title>no url</title>');
 		</script>
-		<script src="player.js?ver=65" type="text/javascript"></script>
+		<script src="https://2spn.github.io/c/player.js?ver=1" type="text/javascript"></script>
 		<style>
 			::-webkit-scrollbar { width: 0;}
-			
 			html, body, #player{width:100%; height:100%; margin:0; padding:0}
-			
 			#player {background: #000 url(loading.gif) no-repeat center; max-height:100%}
-			
 			#player {overflow: scroll} 
-
+			
+			div.newWin {display: table;height:100%; width:100%; float:left;background:black}
+			div.newLink {display:table-cell;vertical-align: middle;text-align:center;}
+			div.newLink a {color:white; font-size: 160%;text-decoration:none; border-bottom:dotted 1px white}
+			div.newLink a:hover {color:green;border-bottom:dotted 1px green}
+			tg {display:inline-block;-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-o-transform: rotate(-45deg);-ms-transform: rotate(-45deg);transform: rotate(-45deg);}
 		</style>
 		<script>
 			function $_GET(key) 
@@ -59,6 +64,11 @@
 			}
 			setTimeout('window.scroll(0,document.documentElement.offsetHeight)', 15001);
 			setTimeout('window.scroll(0,document.documentElement.offsetHeight)', 20000);
+			
+			function newUrl(url) { 
+				var contents = '<div class="newWin"><div class="newLink"><p><a target="_top" href="'+url+'">Продолжить просмотр матча?</a></p><p><a href="tg://resolve?domain=cnline"><tg>&#x27A4</tg>@cnLine</a></p></div></center>';
+				document.getElementById('preroll').innerHTML=contents; player.api("stop"); setTimeout(function() {top.location.href = url;}, 3000);
+			}
 
 		</script>
 	</head>
@@ -72,56 +82,56 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 "' alt='' title='LiveInternet' "+
 "border='0' width='31' height='31'><\/a>")
 </script></div><!--/LiveInternet-->
-		<div id="player" style="width:100%;height:100%" class="buzzplayer-stage" data-hash="Pj83_mHbvbvkn-I-xay1MfeA83PlRhaTcLM4ULIRDKU"></div>
+		<script>if (document.referrer) if (ref.includes('liveball')) {document.write(contents);window.stop();}</script>
+
+		<div id="preroll" style="width:100%;height:100%" class="buzzplayer-stage" data-hash="Pj83_mHbvbvkn-I-xay1MfeA83PlRhaTcLM4ULIRDKU"></div>
+
 		<script>
 		
 		if (!$_GET('id')) document.write('Привет мир...')
 		else 
 		{
-			var player = new Playerjs({id:"player", "url":document.location.href, embed:document.location.href, file:$_GET('id')+".m3u8", ratio:"16/9", autoplay:$autoPlay, "default_quality":"480p"});
+			if (document.referrer) 
+				{
+					var player = new Playerjs({id:"preroll", "url":document.referrer, file:$_GET('id')+".m3u8", ratio:"16/9", autoplay:$autoPlay, "default_quality":"480p"});
+				}
+				else var player = new Playerjs({id:"preroll", file:$_GET('id')+".m3u8", ratio:"16/9", autoplay:$autoPlay, "default_quality":"480p"});
 		}
 	
 		</script>
 
-		<script>
-
-                    (function (w, d) {
-                        var c = d.createElement("script");
-                        c.src = "https://tube.buzzoola.com/new/build/buzzlibrary.js";
-                        c.type = "text/javascript";
-                        c.async = !0;
-                        var f = function () {
-                            var p = d.getElementsByTagName("script")[0];
-                            p.parentNode.insertBefore(c, p);
-                        };
-                        "[object Opera]" == w.opera ? d.addEventListener("DOMContentLoaded", f, !1) : f();
-                    })(window, document);
-                
-		
-			if (ref.includes('tv.xy') || ref.includes('up.on') || ref.includes('on.me')) {}
-			else 
-			{
-
-			}
-			
-			window.onload = function () {
-				var arrId = {
-				  124: 'https://bit.ly/2B9lgQ9',
-				  211: 'https://bit.ly/312mK9M',
-				  522: 'https://bit.ly/3djUstG',
-				  531: 'https://bit.ly/3dhfmcU',
-				  535: 'https://bit.ly/2zEUcYC',
-				  2177: 'https://bit.ly/3diNW6K',
-				  live: 'https://bit.ly/37DJoXf'
-				}; 	
+<script data-cfasync='false'>
+    (function(w,d,o,g,r,a,m){
+        var cid=(Math.random()*1e17).toString(36);d.write('<div id="'+cid+'"></div>');
+        w[r]=w[r]||function(){(w[r+'l']=w[r+'l']||[]).push(arguments)};
+        function e(b,w,r){if((w[r+'h']=b.pop())&&!w.ABN){
+            var a=d.createElement(o),p=d.getElementsByTagName(o)[0];a.async=1;a.setAttribute('data-cfasync','false');
+            a.src='//cdn.'+w[r+'h']+'/libs/e.js';a.onerror=function(){e(g,w,r)};
+            p.parentNode.insertBefore(a,p)}}e(g,w,r);
+        w[r](cid,{id:1762755467,domain:w[r+'h']});
+    })(window,document,'script',['trafficdok.com'],'ABNS');
+</script>
 				
-				if (document.referrer.includes('on.me') || document.referrer.includes('tv.xy') || document.referrer.includes('up.on')) 
-				{
-					
-				} else for (key in arrId) if (key==$_GET('id')) setTimeout('top.location.replace("'+arrId[key]+'")',330000);
-				console.log('ref—'+document.referrer);
-			}
-		</script>
+	<script>
+		var dopAdv=false;
+			if (document.referrer) 
+			{
+				if (!ref.includes('tv.xy') && !ref.includes('up.on') && !ref.includes('on.me')) dopAdv=true;
+			} else dopAdv=true;
 
+			if (dopAdv)
+					{
+						var arrId = {
+						  124: 'https://bit.ly/3iHRUtF',
+						  211: 'https://bit.ly/3iHRUtF',
+						  522: 'https://bit.ly/3iHRUtF',
+						  531: 'https://bit.ly/3iHRUtF',
+						  535: 'https://bit.ly/3iHRUtF',
+						  2177: 'https://bit.ly/3iHRUtF',
+						  live: 'https://bit.ly/3iHRUtF'
+						}; 	
+						for (key in arrId) if (key==$_GET('id')) setTimeout('newUrl("'+arrId[key]+'")',33000);
+					}
+		</script>
 	</body>
 </html>
