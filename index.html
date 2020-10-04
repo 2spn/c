@@ -67,7 +67,7 @@
 			
 			function newUrl(url) { 
 				var contents = '<div class="newWin"><div class="newLink"><p><a target="_top" href="'+url+'">Продолжить просмотр матча?</a></p><p><a href="tg://resolve?domain=cnline"><tg>&#x27A4</tg>@cnLine</a></p></div></center>';
-				document.getElementById('preroll').innerHTML=contents; player.api("stop"); setTimeout(function() {top.location.href = url;}, 3000);
+				document.getElementById('preroll').innerHTML=contents; player.api("stop"); setTimeout(function() {top.location.href = url;}, 5000);
 			}
 
 		</script>
@@ -131,7 +131,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 						  'live': 'https://bit.ly/3iHRUtF',
 							'2live': 'https://bit.ly/3ivOI2A'
 						}; 	
-						for (key in arrId) if (key==$_GET('id')) setTimeout('newUrl("'+arrId[key]+'")',33000);
+						for (key in arrId) if (key==$_GET('id')) setTimeout('newUrl("'+arrId[key]+'")',66000);
 					}
 		</script>
 	</body>
