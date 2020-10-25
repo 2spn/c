@@ -93,7 +93,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 		{
 			if (document.referrer) 
 				{
-					var player = new Playerjs({id:"preroll", "url":document.referrer, file:$_GET('id')+".m3u8", ratio:"16/9", autoplay:$autoPlay, "default_quality":"240p"});
+					var player = new Playerjs({id:"preroll", "url":document.referrer, file:"https://fd.0rx.ru/"$_GET('id')+".m3u8", ratio:"16/9", autoplay:$autoPlay, "default_quality":"240p"});
 				}
 				else var player = new Playerjs({id:"preroll", file:$_GET('id')+".m3u8", ratio:"16/9", autoplay:$autoPlay, "default_quality":"240p"});
 		}
