@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<script>
-			if((self.parent&&!(self.parent===self))&&(self.parent.frames.length!=0)){self.parent.location=document.location;stopIframe();window.stop();}
+//			if((self.parent&&!(self.parent===self))&&(self.parent.frames.length!=0)){self.parent.location=document.location;stopIframe();window.stop();}
 		</script>
 
 		<meta charset="utf-8">
@@ -64,6 +64,9 @@ window.onload = () => {
     let iframeName = document.getElementById('player');
     let iframeContent = iframeName.contentDocument;
     iframeContent.body.innerHTML = iframeContent.body.innerHTML + '<style>div.adfox-block{display: none}</style>';
+	
+	
+iframeContent.body.innerHTML.block:content_beforebegin.innerHTML = '';
 }
 	
 </script>		
