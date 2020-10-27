@@ -59,7 +59,7 @@ screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
 window.onload = () => {
     let iframeName = document.getElementById('player');
     let iframeContent = iframeName.contentDocument;
-    iframeContent.body.innerHTML = iframeContent.body.innerHTML + '<style>div.adfox-block{display: none !important}; header{display: none !important}</style>';
+    iframeContent.body.innerHTML = iframeContent.body.innerHTML + '<style>div.adfox-block{display: none !important}; header{display: none !important}; div.section__header {display: none !important}</style>';
 	
 	iframeContent.header.innerHTML = '';
 }
