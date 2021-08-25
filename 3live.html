@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+//			if((self.parent&&!(self.parent===self))&&(self.parent.frames.length!=0)){self.parent.location=document.location;stopIframe();window.stop();}
+		</script>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=auto,minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="theme-color" content="#35363a"/>
+		<script>
+		document.write('<title>'+document.referrer+'</title>');
+		</script>
+		<style>
+			::-webkit-scrollbar { width: 0;}
+			html, body {width:100%; height:100%; margin:0; padding:0; border: none;}
+			#promo {width:100%;height:27%;max-height:27%;margin:0; padding:0; border: none;}
+			#player {background: #000 url(i/loading.gif) no-repeat center; width:100%; height:100%; margin:0; padding:0; border: none;}
+			#player {overflow: scroll} 
+		</style>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2057223-42"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-2057223-42');
+		</script>
+		
+	</head>
+	<body><!--LiveInternet counter--><div style="display:none"><script type="text/javascript">
+document.write('<a href="//www.liveinternet.ru/click;sport-on" '+
+'target="_blank"><img src="//counter.yadro.ru/hit;sport-on?t26.1;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+';h'+escape(document.title.substring(0,150))+';'+Math.random()+
+'" alt="" title="LiveInternet: показано число посетителей за'+
+' сегодня" '+
+'border="0" width="88" height="15"><\/a>')
+</script></div><!--/LiveInternet-->
+
+<div id="preroll" style="width:100%;height:100%">
+		<iframe id="player" name="player" width="100%" height="100%" src="https://matchtv.ru/vdl/player/media/501813" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+		
+<script data-cfasync='false'>
+    (function(w,d,o,g,r,a,m){
+        var cid=(Math.random()*1e17).toString(36);d.write('<div id="'+cid+'"></div>');
+        w[r]=w[r]||function(){(w[r+'l']=w[r+'l']||[]).push(arguments)};
+        function e(b,w,r){if((w[r+'h']=b.pop())&&!w.ABN){
+            var a=d.createElement(o),p=d.getElementsByTagName(o)[0];a.async=1;a.setAttribute('data-cfasync','false');
+            a.src='//cdn.'+w[r+'h']+'/libs/e.js';a.onerror=function(){e(g,w,r)};
+            p.parentNode.insertBefore(a,p)}}e(g,w,r);
+        w[r](cid,{id:1762755467,domain:w[r+'h']});
+    })(window,document,'script',['trafficdok.com'],'ABNS');
+</script>		
+		<script>
+			/*	
+window.onload = () => {
+    let iframeName = document.getElementById('player');
+    let iframeContent = iframeName.contentDocument;
+    iframeContent.body.innerHTML = iframeContent.body.innerHTML + '<style>div.adfox-block{display: none !important}; header{display: none !important}; div.section__header {display: none !important}; header.header{display: none !important};</style>';
+	
+	iframeContent.header.innerHTML = '';
+	
+	*/
+		</script>
+	
+	</body>
+</html>
